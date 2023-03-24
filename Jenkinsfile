@@ -10,7 +10,7 @@ pipeline {
      steps {
        script {
          def dockerfile = 'Dockerfile'
-         def registry = 'http://localhost:5000'
+         def registry = 'localhost:5000'
          def imageName = 'add-copy-example'
          def imageTag = 'latest'
          def dockerImage = docker.build("${registry}/${imageName}:${imageTag}", "-f ${dockerfile} .")
